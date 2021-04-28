@@ -1,0 +1,30 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  target-branch: develop
+  reviewers:
+  - gep13
+  assignees:
+  - gep13
+  labels:
+  - dependabot
+  ignore:
+  - dependency-name: Microsoft.VSSDK.BuildTools
+    versions:
+    - 16.10.10
+    - 16.10.23
+    - 16.10.31
+    - 16.10.7
+    - 16.9.1044
+    - 16.9.1050
+  - dependency-name: Microsoft.VisualStudio.LanguageServer.Client
+    versions:
+    - 16.8.146
+  - dependency-name: Microsoft.VisualStudio.SDK
+    versions:
+    - 16.0.206
